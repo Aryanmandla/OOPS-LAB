@@ -2,11 +2,11 @@
 using namespace std;
 template<typename T,int MAX> 
 class Stack{
-    int stack[MAX];
+    T stack[MAX];
     int topIndex;
     public:
-    Stack() : topIndex(0) {}
-    void push(const T &value){
+    Stack() : topIndex(0) {};
+    void push(const T& value){
         if(topIndex<MAX){
             stack[topIndex++] = value;
         } else{
@@ -40,10 +40,20 @@ int main(){
     s.push(20);
     s.push(30);
     cout<<"\nThe size of Stack: "<<s.getSize()<<endl;
-    cout<<"Elements in Array: \n";
+    cout<<"Elements in Stack: \n";
     while(!s.empty()){
         cout<<"Top Element of Stack: "<<s.top()<<endl;
         s.pop();
+    }
+    Stack<string,5>ss;
+    ss.push("Hello");
+    ss.push("World");
+    cout<<"\nThe size of Stack: "<<ss.getSize()<<endl;
+    cout<<"Elements in Stack: \n";
+    while(!ss.empty())
+    {
+        cout<<"Top Element of Stack: "<<ss.top()<<endl;
+        ss.pop();
     }
     return 0;
 }
