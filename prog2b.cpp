@@ -7,7 +7,7 @@ class phone{
     int number;
     public:
     phone(){
-        area_code = 044;
+        area_code = 44;
         exchange = 234;
         number = 8900;
     }

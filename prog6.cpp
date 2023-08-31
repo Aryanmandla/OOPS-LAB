@@ -42,7 +42,7 @@ class STACK{
     }
 };
 
-ostream& operator<<(ostream& out, const STACK& obj){
+ostream& operator<<(ostream& out,const STACK& obj){
     obj.display();
     return out;
 }
